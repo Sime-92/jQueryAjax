@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cargar página HTML en Nueva Pestaña</title>
+</head>
+<body>
+    <button id="btnCargar">Carga una página HTML en nueva pestaña</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("btnCargar").addEventListener("click", function() {
+                window.open('pagina.html', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
+

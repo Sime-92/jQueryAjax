@@ -1,0 +1,1 @@
+“Mostrar fichero de texto”

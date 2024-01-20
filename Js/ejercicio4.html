@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario con jQuery POST</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2>Enviar Datos</h2>
+    <form id="miFormulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+        <label for="edad">Edad:</label>
+        <input type="text" id="edad" name="edad"><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#miFormulario").submit(function(event) {
+                event.preventDefault();
+                $.post("procesar.php", {
+                    nombre: $("#nombre").val(),
+                    edad: $("#edad").val()
+                }, function(data) {
+                    $("#resultado").html(data);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

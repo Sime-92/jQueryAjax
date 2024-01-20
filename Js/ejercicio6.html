@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Desaparecer Párrafos</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<p>Este es un párrafo.</p>
+<p>Otro párrafo más.</p>
+<p>Y aquí tenemos otro párrafo.</p>
+
+<button id="btnDesaparecer">Desaparecer</button>
+
+<script>
+    $(document).ready(function() {
+    // Definición del plugin
+    $.fn.desaparecerParrafos = function() {
+        this.click(function() {
+            $('p').hide();
+        });
+        return this;
+    };
+
+   
+    $('#btnDesaparecer').desaparecerParrafos();
+});
+
+</script>
+
+</body>
+</html>

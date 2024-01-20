@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<historia>
+    <personaje>
+        <nombre>Alex</nombre>
+        <rol>Heroe</rol>
+        <descripción>Aventurero valiente y astuto</descripción>
+    </personaje>
+    <personaje>
+        <nombre>Mara</nombre>
+        <rol>Hechicera</rol>
+        <descripción>Experta en magia antigua y misterios arcanos</descripción>
+    </personaje>
+    <personaje>
+        <nombre>Rurik</nombre>
+        <rol>Guerrero</rol>
+        <descripción>Poderoso luchador con una gran fuerza</descripción>
+    </personaje>
+</historia>
