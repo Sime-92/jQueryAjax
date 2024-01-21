@@ -1,20 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Mostrar Contenido XML</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #contenidoXML {
+            margin-top: 20px;
+            border: none;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
+
 <body>
     <button id="btnMostrarXML">Mostrar fichero XML</button>
     <div id="contenidoXML"></div>
 
     <script>
-        $(document).ready(function() {
-            $("#btnMostrarXML").click(function() {
-                $.get("personajes.xml", function(data) {
+        $(document).ready(function () {
+            $("#btnMostrarXML").click(function () {
+                $.get("personajes.xml", function (data) {
                     var xmlContent = '<h2>Personajes de la Historia</h2>';
-                    $(data).find('personaje').each(function(){
+                    $(data).find('personaje').each(function () {
                         xmlContent += '<b>Nombre:</b> ' + $(this).find('nombre').text() + '<br>';
                         xmlContent += '<b>Rol:</b> ' + $(this).find('rol').text() + '<br>';
                         xmlContent += '<b>Descripción:</b> ' + $(this).find('descripción').text() + '<br><br>';
@@ -25,4 +62,5 @@
         });
     </script>
 </body>
+
 </html>

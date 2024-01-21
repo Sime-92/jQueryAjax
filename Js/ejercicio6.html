@@ -4,6 +4,38 @@
     <meta charset="utf-8">
     <title>Desaparecer Párrafos</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+    body {
+        background-color: linear-gradient(to bottom, #c8e6ef 0%, #87ceeb 100%);
+        margin: 0;
+        padding: 0;
+        width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+     
+      
+      p {
+        margin: 0 0 10px 0;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      
+      button {
+        background-color: #000;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+        button:hover {
+          background-color: #333;
+        }
+    
+    </style>
 </head>
 <body>
 
@@ -15,7 +47,7 @@
 
 <script>
     $(document).ready(function() {
-    // Definición del plugin
+    // Definir el plugin
     $.fn.desaparecerParrafos = function() {
         this.click(function() {
             $('p').hide();

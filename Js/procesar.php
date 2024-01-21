@@ -5,6 +5,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     echo "Recibido: Nombre es $nombre y Edad es $edad";
 } else {
-    echo "Método no permitido";
+    echo "Error";
 }
 ?>

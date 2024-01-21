@@ -3,10 +3,32 @@
 <head>
     <meta charset="utf-8">
     <title>Cargar página HTML</title>
-  
+    <style>
+        @keyframes animatedBackground {
+            0% { background-color: #1abc9c; }
+            25% { background-color: #3498db; }
+            50% { background-color: #9b59b6; }
+            75% { background-color: #e74c3c; }
+            100% { background-color: #2ecc71; }
+        }
+
+        body {
+            animation: animatedBackground 10s infinite alternate;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        p {
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
 </head>
-<body style="background-color: aqua;">
+<body>
     <p>Carga una página HTML</p>
-    
 </body>
 </html>
